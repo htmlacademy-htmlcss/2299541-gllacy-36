@@ -57,27 +57,33 @@
         <ul class="slider__items list">
           <li class="slider__item">
             <div class="card">
-              <h2 class="card__title title-h2">Нежный пломбир с клубничным джемом</h2>
-              <p class="card__text text text--big">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
-              <button class="button button--white" type="button">Заказать</button>
+              <div class="card__about">
+                <h2 class="card__title title-h2">Нежный пломбир с клубничным джемом</h2>
+                <p class="card__text text text--big">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
+                <button class="button button--white" type="button">Заказать</button>
+              </div>
+              <img class="card__image" src="images/slider/ice-1.png" alt="Нежный пломбир с клубничным джемом" width="328" height="507">
             </div>
-            <img class="card__image" src="images/slider/ice-1.png" alt="Нежный пломбир с клубничным джемом" width="328" height="507">
           </li>
           <li class="slider__item">
-            <div class="card__about">
-              <h2 class="card__title title-h2">Сливочное мороженое со вкусом банана</h2>
-              <p class="card__text text text--big">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
-              <button class="button button--white" type="button">Заказать</button>
+            <div class="card">
+              <div class="card__about">
+                <h2 class="card__title title-h2">Сливочное мороженое со вкусом банана</h2>
+                <p class="card__text text text--big">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
+                <button class="button button--white" type="button">Заказать</button>
+              </div>
+              <img class="card__image" src="images/slider/ice-2.png" alt="Сливочное мороженое со вкусом банана" width="328" height="507">
             </div>
-            <img class="card__image" src="images/slider/ice-2.png" alt="Сливочное мороженое со вкусом банана" width="328" height="507">
           </li>
           <li class="slider__item">
-            <div class="card__about">
-              <h2 class="card__title title-h2">Карамельный пломбир с маршмеллоу</h2>
-              <p class="card__text text text--big">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
-              <button class="button button--white" type="button">Заказать</button>
+            <div class="card">
+              <div class="card__about">
+                <h2 class="card__title title-h2">Карамельный пломбир с маршмеллоу</h2>
+                <p class="card__text text text--big">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
+                <button class="button button--white" type="button">Заказать</button>
+              </div>
+              <img class="card__image" src="images/slider/ice-3.png" alt="Карамельный пломбир с маршмеллоу" width="328" height="507">
             </div>
-            <img class="card__image" src="images/slider/ice-3.png" alt="Карамельный пломбир с маршмеллоу" width="328" height="507">
           </li>
         </ul>
         <ul class="slider-tab list">
@@ -89,9 +95,15 @@
           </li>
         </ul>
         <ul class="slider__dots list">
-          <li class="dot dot--current"></li>
-          <li class="dot"></li>
-          <li class="dot"></li>
+          <li class="slider__dot">
+            <button class="dot dot--current" type="button"></button>
+          </li>
+          <li class="slider__dot">
+            <button class="dot" type="button"></button>
+          </li>
+          <li class="slider__dot">
+            <button class="dot" type="button"></button>
+          </li>
         </ul>
         <ul class="social social--slider list">
           <li class="social__item social__item--tg">
@@ -190,7 +202,7 @@
       </section>
       <section class="news">
         <p class="news__text text">Новое в нашем блоге</p>
-        <h2 class="news__title title-h4"><a class="link" href="#"></a>10 способов сервировки фруктовых щербетов к столу</a></h2>
+        <h2 class="news__title title-h4"><a class="link" href="#">10 способов сервировки фруктовых щербетов к столу</a></h2>
       </section>
       <div class="subscribe-form">
         <form class="subscribe-form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
@@ -227,7 +239,7 @@
           <p class="contacts__text text">Адрес главного офиса и офлайн-магазина:</p>
           <h3 class="contacts__title title-h5">наб. реки Карповки, 5 лит П, Санкт-Петербург</h3>
           <p class="contacts__text text">Для заказов по телефону:</p>
-          <a class="contacts__phone" href="tel:+78005558628">+7 800 555-86-28</a>
+          <a class="contacts__phone link" href="tel:+78005558628">+7 800 555-86-28</a>
           <p class="contacts__text text text--small">(с 10 до 20 ежедневно)</p>
           <button class="button button--red contacts__button" type="submit">Форма обратной связи</button>
         </div>
