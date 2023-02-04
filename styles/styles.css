@@ -133,6 +133,7 @@ body {
   text-decoration: none;
   display: inline-block;
   min-width: 139px;
+  cursor: pointer;
 }
 
 .button--white {
@@ -195,7 +196,7 @@ body {
 }
 
 .mb--l {
-  margin-bottom: 45px;
+  margin-bottom: 55px;
 }
 
 .mb--xl {
@@ -245,7 +246,9 @@ body {
   color: #2D3440;
   line-height: 20px;
   text-decoration: none;
-  padding: 41px 0;
+  padding: 8px 16px;
+  border-radius: 30px;
+  display: inline-block;
 }
 
 .navigation__link--selected {
@@ -305,6 +308,14 @@ body {
 /* слайдер */
 .slider {
   padding-top: 21px;
+  margin-bottom: 76px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slider__items {
+  width: 100%;
 }
 
 .slider__item {
@@ -318,6 +329,11 @@ body {
 /* slider tab */
 .slider-tab {
   display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 47%;
+  width: 31%;
+  left: 45%;
 }
 
 .slider-tab__button {
@@ -341,6 +357,7 @@ body {
 
 .slider__dots {
   display: flex;
+  margin-top: 8px;
 }
 
 .slider__dot {
@@ -388,6 +405,10 @@ body {
   display: flex;
 }
 
+.social--slider {
+  margin-left: auto;
+}
+
 .social__item {
   width: 24px;
   height: 24px;
@@ -415,10 +436,6 @@ body {
 }
 
 /* блок про подарки */
-.gifts {
-  padding-top: 30px;
-}
-
 .gifts__title {
   max-width: 434px;
   margin-right: auto;
@@ -468,22 +485,29 @@ body {
 }
 
 .catalog__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
+  display: grid;
+  gap: 40px 30px;
+  grid-template-columns: repeat(4, 270px);
 }
 
 .catalog__item {
-  background: #FCFCFC;
-  border-radius: 8px;
   width: 270px;
   padding: 0 40px 24px;
-  display: block;
-  margin-right: 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-.catalog__item:nth-child(4n) {
-  margin-right: 0;
+.catalog__item:after {
+  background: #FCFCFC;
+  border-radius: 8px;
+  width: 100%;
+  content: '';
+  top: 51px;
+  left: 0;
+  position: absolute;
+  height: calc(100% - 51px);
+  z-index: -1;
 }
 
 .catalog__link {
@@ -504,6 +528,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
+  object-fit: contain;
 }
 
 .catalog__price-block {
@@ -531,6 +556,12 @@ body {
   background-position: center;
   border: none;
   fill: #FCFCFC;
+  cursor: pointer;
+}
+
+.catalog__button-wrapper {
+  margin-left: auto;
+  text-align: center;
 }
 
 /* информация о магазине */
@@ -550,9 +581,9 @@ body {
 }
 
 .info__block {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  gap: 40px 31px;
+  grid-template-columns: auto auto;
 }
 
 .info__title {
@@ -564,10 +595,6 @@ body {
   width: 442px;
 }
 
-.info__item:nth-last-child(1),
-.info__item:nth-last-child(2) {
-  margin-bottom: 0;
-}
 .info__text {
   color: #565C66;
 }
@@ -626,7 +653,7 @@ body {
 
 .delivery__about {
   width: 371px;
-  padding-top: 107px;
+  padding-top: 102px;
   margin-left: 36px;
 }
 
@@ -638,31 +665,50 @@ body {
   padding: 40px;
 }
 
+.delivery-form__block {
+  display: grid;
+  grid-template-columns: 117px 287px;
+  gap: 20px 16px;
+}
+
 .delivery-form__label {
   font-weight: 700;
   line-height: 20px;
   color: #2D3440;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
 }
 
 .delivery-form__label--date {
-  width: 170px;
+  grid-row: 1;
+  grid-column: 1;
 }
 
 .delivery-form__label--phone {
-  width: 287px;
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.delivery-form__label--adress {
+  grid-row: 2;
+  grid-column: 1/-1;
+}
+
+.delivery-form__input {
+  margin-top: 8px;
+}
+
+.delivery-form__text {
+  margin-bottom: 30px;
 }
 
 .delivery-form__button {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.delivery-form__input:first-child {
-  max-width: 117px;
+  grid-row: 3;
+  grid-column: 1/-1;
+  justify-items: center;
+  justify-self: center;
+  margin-top: 8px;
 }
 
 /* контакты */
@@ -692,7 +738,7 @@ body {
   text-align: left;
 }
 
-.contact__text:last-child {
+.contacts__text--small {
   margin-bottom: 29px;
 }
 
@@ -725,15 +771,16 @@ body {
 }
 
 .footer-menu {
+  margin-left: 50px;
   width: 356px;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0;
 }
 
 .footer-menu__item {
   font-size: 14px;
   line-height: 20px;
-  margin-right: 16px;
  }
 
 .footer-menu__link {
@@ -808,7 +855,12 @@ body {
 
 .pagination {
   display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-wrap: wrap;
+  width: 43%;
 }
+
 .pagination__item {
   text-align: center;
   width: 24px;
@@ -825,4 +877,5 @@ body {
   text-decoration: none;
   color: #2D3440;
   line-height: 20px;
+  cursor: pointer;
 }
