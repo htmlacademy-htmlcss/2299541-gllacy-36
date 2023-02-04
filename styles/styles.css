@@ -133,6 +133,7 @@ body {
   text-decoration: none;
   display: inline-block;
   min-width: 139px;
+  cursor: pointer;
 }
 
 .button--white {
@@ -476,12 +477,6 @@ body {
 }
 
 /* каталог */
-.catalog {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .catalog__title {
   max-width: 527px;
   margin-left: auto;
@@ -561,12 +556,12 @@ body {
   background-position: center;
   border: none;
   fill: #FCFCFC;
+  cursor: pointer;
 }
 
 .catalog__button-wrapper {
   margin-left: auto;
   text-align: center;
-  width: 26%;
 }
 
 /* информация о магазине */
@@ -863,7 +858,7 @@ body {
   align-items: center;
   justify-content: end;
   flex-wrap: wrap;
-  width: 36%;
+  width: 43%;
 }
 
 .pagination__item {
@@ -882,4 +877,5 @@ body {
   text-decoration: none;
   color: #2D3440;
   line-height: 20px;
+  cursor: pointer;
 }
