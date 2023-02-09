@@ -139,78 +139,62 @@ body {
 
 .button--white {
   background-color: #FCFCFC;
-  /* border: 4px solid rgba(252, 252, 252, 0.4); */
-  /* box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1); */
   color: #2D3440;
   box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4);
 }
 
 .button--white:hover {
   background: rgba(252, 252, 252, 0.4);
-  /* border: 4px solid #FCFCFC; */
-  /* box-shadow: 0 4px 15px rgba(133, 133, 133, 0.15); */
   box-shadow: 0 0 0 4px #FCFCFC;
 }
 
 .button--white:active {
   background: #FCFCFC;
-  /* border: 2px solid #2D3440; */
   box-shadow: 0 0 0 2px #2D3440;
-  /* padding: 14px 34px; */
 }
 
 .button--white:focus {
   background: rgba(252, 252, 252, 0.5);
-  /* border: 2px solid #2D3440; */
   box-shadow: 0 0 0 2px #2D3440;
-  /* padding: 14px 34px; */
 }
 
 .button--white:disabled {
   background: #E7E7E7;
   box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4);
-  /* border: 4px solid rgba(252, 252, 252, 0.4); */
   font-weight: 400;
 }
 
 .button--red {
   background-color: #FF2F64;
-  /* border: 4px solid rgba(255, 47, 100, 0.3); */
   box-shadow: 0 0 0 4px rgba(255, 47, 100, 0.3);
   color: #FCFCFC;
 }
 
 .button--red:hover {
   background: rgba(252, 252, 252, 0.3);
-  /* border: 4px solid #FF2F64; */
   color: #2D3440;
   box-shadow: 0 0 0 4px #FF2F64;
 }
 
 .button--red:active {
   background: #FEAFC3;
-  /* border: 2px solid #2D3440; */
   box-shadow: 0 0 0 2px #2D3440;
   color: #FCFCFC;
 }
 
 .button--red:focus {
   background: #FF2F64;
-  /* border: 2px solid #2D3440; */
-  /* box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1); */
   box-shadow: 0 0 0 2px #2D3440;
 }
 
 .button--red:disabled {
   background: #B9B9B9;
-  /* border: 4px solid rgba(185, 185, 185, 0.3); */
   color: #565C66;
   box-shadow: 0 0 0 4px rgba(185, 185, 185, 0.3);
 }
 
 .button--light {
   background-color: rgba(252, 252, 252, 0.3);
-  /* border: 2px solid #FCFCFC; */
   border-radius: 20px;
   color: #2D3440;
   padding: 8px 32px;
@@ -220,26 +204,22 @@ body {
 
 .button--light:hover {
   background: #FCFCFC;
-  /* border: 2px solid rgba(252, 252, 252, 0.3); */
   box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.3);
 }
 
 .button--light:active {
   background: rgba(252, 252, 252, 0.5);
-  /* border: 2px solid transparent; */
   box-shadow: none;
 }
 
 .button--light:focus {
   background: rgba(252, 252, 252, 0.3);
-  /* border: 2px solid #2D3440; */
   box-shadow: 0 0 0 2px #2D3440;
 }
 
 .button--light:disabled {
   background: rgba(252, 252, 252, 0.3);
   opacity: 0.4;
-  /* border: 2px solid #FCFCFC; */
   box-shadow: 0 0 0 2px #FCFCFC;
 }
 
@@ -273,14 +253,6 @@ body {
 
 .mb--m {
   margin-bottom: 35px;
-}
-
-.mb--ml {
-  margin-bottom: 42px;
-}
-
-.mb--l {
-  margin-bottom: 55px;
 }
 
 .mb--xl {
@@ -656,32 +628,6 @@ body {
   background-color: #2D3440;
   border: 2px solid #2D3440;
 }
-/*
-.social__item:hover .social__link:after {
-  background-color: #2D3440;
-}
-
-.social__item:active .social__link:after {
-  background-color: #2D3440;
-  opacity: 0.5;
-}
-
-.social__item:active path {
-  fill: rgba(252, 252, 252, 0.3);
-}
-
-.social__item:focus path {
-  fill: #FCFCFC;
-}
-
-.social__item:focus .social__icon {
-  border: 2px solid #2D3440;
-}
-
-.social__item:focus .social__link:after {
-  background-color: #2D3440;
-} */
-
 
 /* блок про подарки */
 .gifts__title {
@@ -689,6 +635,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
+  margin-bottom: 55px;
 }
 
 .gifts__items {
@@ -852,6 +799,10 @@ body {
 .catalog__button-wrapper {
   margin-left: auto;
   text-align: center;
+}
+
+.catalog-filter {
+  margin-bottom: 42px;
 }
 
 /* информация о магазине */
