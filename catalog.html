@@ -75,79 +75,85 @@
               <a class="breadcrumbs__link" href="#">Каталог</a>
             </li>
             <li class="breadcrumbs__item">
-              <a class="breadcrumbs__link">Сливочное мороженое</a>
+              <a class="breadcrumbs__link breadcrumbs__link--selected">Сливочное мороженое</a>
             </li>
           </ul>
-          <h1 class="inner-header__title title-h2 mb--m">Сливочное мороженое</h1>
+          <h1 class="inner-header__title title-h2">Сливочное мороженое</h1>
         </header>
         <section class="catalog-filter">
           <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
             <h2 class="visually-hidden">Фильтр мороженного</h2>
-            <label class="filter-form__title text text--small" for="select-control">Сортировка:</label>
-            <select class="select-control" id="select-control" aria-label="Сортировка">
-              <option value="popular" selected>по популярности</option>
-              <option value="cheap">по возрастанию цены</option>
-              <option value="expensive">по убыванию цены</option>
-            </select>
-            <div class="filter-form__range">
-              <p class="filter-form__title text text--small">Цена: 100 ₽ – 500 ₽</p>
+            <div class="filter-form__row filter-form__row--first">
+              <div class="filter-form__select">
+                <label class="filter-form__title text text--small" for="select-control">Сортировка:</label>
+                <select class="select-control" id="select-control" aria-label="Сортировка">
+                  <option value="popular" selected>по популярности</option>
+                  <option value="cheap">по возрастанию цены</option>
+                  <option value="expensive">по убыванию цены</option>
+                </select>
+              </div>
+              <div class="filter-form__range">
+                <p class="filter-form__title text text--small">Цена: 100 ₽ – 500 ₽</p>
+              </div>
+              <fieldset class="filter-form__group filter-form__group--fat">
+                <legend class="filter-form__title text text--small">Жирность:</legend>
+                <ul class="filter-form__list list filter-form__list--fat">
+                  <li class="filter-form__item">
+                    <label class="control text text--small">
+                      <input class="control__input input" type="radio" name="fatness" value="0">0%
+                    </label>
+                  </li>
+                  <li class="filter-form__item">
+                    <label class="control text text--small">
+                      <input class="control__input input" type="radio" name="fatness" value="max10" checked>до 10%
+                    </label>
+                  </li>
+                  <li class="filter-form__item">
+                    <label class="control text text--small">
+                      <input class="control__input input" type="radio" name="fatness" value="max30">до 30%
+                    </label>
+                  </li>
+                  <li class="filter-form__item">
+                    <label class="control text text--small">
+                      <input class="control__input input" type="radio" name="fatness" value="min30">выше 30%
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
             </div>
-            <fieldset class="filter-form__group">
-              <legend class="filter-form__title text text--small">Жирность:</legend>
-              <ul class="filter-form__list list filter-form__list--fat">
-                <li class="filter-form__item">
-                  <label class="control text text--small">
-                    <input class="control__input input" type="radio" name="fatness" value="0">0%
-                  </label>
-                </li>
-                <li class="filter-form__item">
-                  <label class="control text text--small">
-                    <input class="control__input input" type="radio" name="fatness" value="max10" checked>до 10%
-                  </label>
-                </li>
-                <li class="filter-form__item">
-                  <label class="control text text--small">
-                    <input class="control__input input" type="radio" name="fatness" value="max30">до 30%
-                  </label>
-                </li>
-                <li class="filter-form__item">
-                  <label class="control text text--small">
-                    <input class="control__input input" type="radio" name="fatness" value="min30">выше 30%
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="filter-form__group">
-              <legend class="filter-form__title text text--small">Наполнители:</legend>
-              <ul class="filter-form__list list filter-form__list--add">
-                <li class="filter-form__item">
-                  <label class="control text text--small">
-                    <input class="control__input input" type="checkbox" name="chocolate" checked>шоколадные
-                  </label>
-                </li>
-                <li class="filter-form__item">
-                  <label class="control text text--small">
-                    <input class="control__input input" type="checkbox" name="sugar-sprinkles" checked>сахарные посыпки
-                  </label>
-                </li>
-                <li class="filter-form__item">
-                  <label class="control text text--small">
-                    <input class="control__input input" type="checkbox" name="fruits">фрукты
-                  </label>
-                </li>
-                <li class="filter-form__item">
-                  <label class="control text text--small">
-                    <input class="control__input input" type="checkbox" name="syrups">сиропы
-                  </label>
-                </li>
-                <li class="filter-form__item">
-                  <label class="control text text--small">
-                    <input class="control__input input" type="checkbox" name="jams">джемы
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
-            <button class="button button--light filter-form__button" type="submit">Применить</button>
+            <div class="filter-form__row">
+              <fieldset class="filter-form__group">
+                <legend class="filter-form__title text text--small">Наполнители:</legend>
+                <ul class="filter-form__list list filter-form__list--add">
+                  <li class="filter-form__item">
+                    <label class="control text text--small">
+                      <input class="control__input input" type="checkbox" name="chocolate" checked>шоколадные
+                    </label>
+                  </li>
+                  <li class="filter-form__item">
+                    <label class="control text text--small">
+                      <input class="control__input input" type="checkbox" name="sugar-sprinkles" checked>сахарные посыпки
+                    </label>
+                  </li>
+                  <li class="filter-form__item">
+                    <label class="control text text--small">
+                      <input class="control__input input" type="checkbox" name="fruits">фрукты
+                    </label>
+                  </li>
+                  <li class="filter-form__item">
+                    <label class="control text text--small">
+                      <input class="control__input input" type="checkbox" name="syrups">сиропы
+                    </label>
+                  </li>
+                  <li class="filter-form__item">
+                    <label class="control text text--small">
+                      <input class="control__input input" type="checkbox" name="jams">джемы
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <button class="button button--light filter-form__button" type="submit">Применить</button>
+            </div>
           </form>
         </section>
         <section class="catalog mb--xl">

@@ -328,16 +328,16 @@ body {
   background-clip: padding-box;
 }
 
-.navigation__link:active {
-  background: #FCFCFC;
-  border: 2px solid #FCFCFC;
-}
-
 .navigation__link:focus {
   background: rgba(252, 252, 252, 0.5);
   border: 2px solid #2D3440;
   border-radius: 30px;
   outline: none;
+}
+
+.navigation__link:active {
+  background: #FCFCFC;
+  border: 2px solid #FCFCFC;
 }
 
 .navigation__link--selected {
@@ -397,14 +397,14 @@ body {
   border: 2px solid transparent;
 }
 
-.navigation-with-logo__link:active {
-  background: #FCFCFC;
-  border: 2px solid #FCFCFC;
-}
-
 .navigation-with-logo__link:focus {
   background: rgba(252, 252, 252, 0.5);
   border: 2px solid #2D3440;
+}
+
+.navigation-with-logo__link:active {
+  background: #FCFCFC;
+  border: 2px solid #FCFCFC;
 }
 
 .navigation-with-logo__item:last-child {
@@ -415,7 +415,7 @@ body {
 .navigation-with-logo__icon {
   fill: #2D3440;
   position: absolute;
-  margin: auto 7px auto 16px;
+  margin: auto 7px auto 14px;
   z-index: 1;
 }
 
@@ -469,29 +469,20 @@ body {
   fill: #2D3440;
 }
 
-.slider-tab__button:active {
-  background: rgba(252, 252, 252, 0.5);
-}
-
-.slider-tab__button:active path {
-  fill: #2D3440;
-}
-
-.slider-tab__button:focus {
-  background: rgba(252, 252, 252, 0.3);
-  border: 2px solid #2D3440;
-}
-
-.slider-tab__button:active path {
-  fill: #2D3440;
-}
-
 .slider-tab__button:focus {
   background: rgba(252, 252, 252, 0.3);
   border: 2px solid #2D3440;
 }
 
 .slider-tab__button:focus path {
+  fill: #2D3440;
+}
+
+.slider-tab__button:active {
+  background: rgba(252, 252, 252, 0.5);
+}
+
+.slider-tab__button:active path {
   fill: #2D3440;
 }
 
@@ -551,13 +542,13 @@ body {
   border: 1px solid #FCFCFC;
 }
 
-.dot:active {
-  background: #FCFCFC;
-}
-
 .dot:focus {
   background: rgba(252, 252, 252, 0.3);
   border: 1px solid #2D3440;
+}
+
+.dot:active {
+  background: #FCFCFC;
 }
 
 .card {
@@ -619,14 +610,14 @@ body {
   background-color: #2D3440;
 }
 
-.social__link:active {
-  opacity: 0.5;
-  background-color: #B9B9B9;
-}
-
 .social__link:focus {
   background-color: #2D3440;
   border: 2px solid #2D3440;
+}
+
+.social__link:active {
+  opacity: 0.5;
+  background-color: #B9B9B9;
 }
 
 /* блок про подарки */
@@ -762,13 +753,13 @@ body {
   background: rgba(252, 252, 252, 0.3);
 }
 
-.catalog__cart:active {
-  background: #FFCBD8;
-}
-
 .catalog__cart:focus {
   background: #FF2F64;
   border: 2px solid #2D3440;
+}
+
+.catalog__cart:active {
+  background: #FFCBD8;
 }
 
 .catalog__cart:disabled {
@@ -784,12 +775,12 @@ body {
   fill: #2D3440;
 }
 
-.catalog__cart:active path {
-  fill: #2D3440;
-}
-
 .catalog__cart:focus path {
   fill: #FCFCFC;
+}
+
+.catalog__cart:active path {
+  fill: #2D3440;
 }
 
 .catalog__cart:disabled path {
@@ -1129,8 +1120,13 @@ body {
   text-decoration: none;
 }
 
-.breadcrumbs__item:last-child {
-  text-decoration: underline;
+.breadcrumbs__link--selected {
+  padding-bottom: 3px;
+  border-bottom: 1px solid #2D3440;
+}
+
+.inner-header {
+  margin-bottom: 40px;
 }
 
 .inner-header__title {
@@ -1138,12 +1134,47 @@ body {
   font-size: 32px;
 }
 
+.filter-form__row {
+  display: grid;
+  gap: 0 24px;
+  justify-content: start;
+  align-items: end;
+}
+
+.filter-form__row--first {
+  margin-bottom: 12px;
+}
+
 .select-control {
+  margin: 0;
   width: 196px;
+  background: rgba(252, 252, 252, 0.3);
+  border-radius: 20px;
+  padding: 8px 12px 9px;
+  border: 1px solid transparent;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.select-control:hover {
+  background: rgba(252, 252, 252, 0.5);
+}
+
+.select-control:focus {
+  border-radius: 20px;
+  border: 1px solid #FCFCFC;
+}
+
+.filter-form__select {
+  width: 196px;
+  grid-column: 1;
 }
 
 .filter-form__range {
   width: 196px;
+  grid-column: 2;
 }
 
 .filter-form__list {
@@ -1152,6 +1183,8 @@ body {
   padding: 8px 24px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 40px;
 }
 
 .filter-form__list--fat {
@@ -1164,10 +1197,32 @@ body {
 
 .filter-form__group {
   border: none;
+  width: 604px;
+  grid-column: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-form__group--fat {
+  width: 383px;
+  grid-column: 3;
 }
 
 .filter-form__title {
   color: #2D3440;
+  padding-left: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.filter-form__button {
+  width: 185px;
+  grid-column: 2;
+}
+
+.control {
+  display: flex;
+  align-items: center;
 }
 
 .pagination {
