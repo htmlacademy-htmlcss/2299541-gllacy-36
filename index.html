@@ -13,15 +13,30 @@
         </a>
         <ul class="navigation__list list">
           <li class="navigation__item navigation__item--list">
-            <ul class="navigation-second list">
-              <li class="navigation-second__item">
-                <a class="navigation__link" href="catalog.html">Каталог
-                  <svg class="navigation-second__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.80799 6.19526C3.54764 5.93491 3.12553 5.93491 2.86518 6.19526C2.60483 6.45561 2.60483 6.87772 2.86518 7.13807L7.52553 11.7984C7.52759 11.8005 7.52967 11.8026 7.53177 11.8047C7.66246 11.9354 7.83392 12.0005 8.00521 12C8.17518 11.9995 8.34498 11.9344 8.47466 11.8047C8.47675 11.8027 8.47881 11.8006 8.48087 11.7985L13.1412 7.13807C13.4016 6.87772 13.4016 6.45561 13.1412 6.19526C12.8809 5.93491 12.4588 5.93491 12.1984 6.19526L8.00321 10.3905L3.80799 6.19526Z" fill="#2D3440"/>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            <span class="navigation__link navigation__link--with-dropdown">Каталог
+              <svg class="navigation__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.80799 6.19526C3.54764 5.93491 3.12553 5.93491 2.86518 6.19526C2.60483 6.45561 2.60483 6.87772 2.86518 7.13807L7.52553 11.7984C7.52759 11.8005 7.52967 11.8026 7.53177 11.8047C7.66246 11.9354 7.83392 12.0005 8.00521 12C8.17518 11.9995 8.34498 11.9344 8.47466 11.8047C8.47675 11.8027 8.47881 11.8006 8.48087 11.7985L13.1412 7.13807C13.4016 6.87772 13.4016 6.45561 13.1412 6.19526C12.8809 5.93491 12.4588 5.93491 12.1984 6.19526L8.00321 10.3905L3.80799 6.19526Z" fill="#2D3440"/>
+              </svg>
+            </span>
+            <div class="popover popover--dropdown">
+              <ul class="dropdown popover__content list">
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Новинки</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="catalog.html">Сливочное</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Щербеты</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Фруктовый лед</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Мелорин</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="#">Доставка и оплата</a>
@@ -37,10 +52,21 @@
               <span class="visually-hidden">
                 Поиск
               </span>
-              <svg class="icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="navigation-with-logo__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66341 7.33008C2.66341 4.75275 4.75275 2.66341 7.33008 2.66341C9.90741 2.66341 11.9967 4.75275 11.9967 7.33008C11.9967 8.58735 11.4995 9.7285 10.691 10.5676C10.6682 10.5852 10.6462 10.6044 10.6253 10.6253C10.6044 10.6463 10.5852 10.6682 10.5676 10.6911C9.72847 11.4996 8.58734 11.9967 7.33008 11.9967C4.75275 11.9967 2.66341 9.90741 2.66341 7.33008ZM11.0752 12.018C10.0487 12.8391 8.74675 13.3301 7.33008 13.3301C4.01637 13.3301 1.33008 10.6438 1.33008 7.33008C1.33008 4.01637 4.01637 1.33008 7.33008 1.33008C10.6438 1.33008 13.3301 4.01637 13.3301 7.33008C13.3301 8.74676 12.8391 10.0488 12.018 11.0752L14.4681 13.5253C14.7285 13.7857 14.7285 14.2078 14.4681 14.4682C14.2078 14.7285 13.7857 14.7285 13.5253 14.4682L11.0752 12.018Z" fill="#2D3440"/>
               </svg>
             </a>
+            <div class="popover popover--search">
+              <div class="popover__content">
+                <form action="https://echo.htmlacademy.ru/" method="post" class="search">
+                  <label class="visually-hidden" for="search__input">Поиск</label>
+                  <input class="search__input input" type="text" id="search__input" placeholder="Поиск по сайту">
+                  <button class="search__close-button" type="reset">
+                    <span class="visually-hidden">Сбросить</span>
+                  </button>
+                </form>
+              </div>
+            </div>
           </li>
           <li class="navigation-with-logo__item">
             <a class="navigation-with-logo__link navigation-with-logo__link--icon-login" href="#">
@@ -49,7 +75,26 @@
               </svg>
               Вход
             </a>
+            <div class="popover popover--login">
+              <div class="popover__content">
+                <h2 class="popover__title title-h4">Личный кабинет</h2>
+                <form class="login" action="https://echo.htmlacademy.ru/" method="post">
+                  <label class="visually-hidden" for="login-email">Email</label>
+                  <input class="login__input input" type="email" id="login-email" placeholder="email@example.com">
+                  <label class="visually-hidden" for="login-pass">Пароль</label>
+                  <input class="login__input input" type="password" id="login-pass" placeholder="....">
+                  <div class="login__bottom-block">
+                    <button class="login__button button button--red" type="button">Войти</button>
+                    <div class="login__link-block">
+                      <a class="login__link text--small" href="#">Забыли пароль?</a>
+                      <a class="login__link text--small" href="#">Регистрация</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </li>
+
           <li class="navigation-with-logo__item">
             <a class="navigation-with-logo__link navigation-with-logo__link--icon-cart" href="#">
               <span class="visually-hidden">
@@ -60,6 +105,37 @@
               </svg>
               2 товара
             </a>
+            <div class="popover popover--cart">
+              <div class="popover__content">
+                <h2 class="popover__title title-h4">Корзина</h2>
+                <section class="cart">
+                  <div class="cart__container">
+                    <div class="cart__item">
+                      <img class="cart__image" src="images/catalog/ice-12.jpg" alt="Сливочное мороженое с малиновым джемом." width="46" height="46">
+                      <div class="cart__info">
+                        <h3 class="cart__title text--big">Малинка</h3>
+                        <p class="cart__text text--small">1 кг х 310 ₽</p>
+                      </div>
+                      <p class="cart__coast text--big">310 ₽</p>
+                      <button class="cart__del" type="button"><span class="visually-hidden">Удалить</span></button>
+                    </div>
+                    <div class="cart__item">
+                      <img class="cart__image" src="images/catalog/ice-3.jpg" alt="Ванильный пломбир со сладкой посыпкой." width="46" height="46">
+                      <div class="cart__info">
+                        <h3 class="cart__title text--big">Бабл-гам</h3>
+                        <p class="cart__text text--small">1,5 кг х 320 ₽</p>
+                      </div>
+                      <p class="cart__coast text--big">480 ₽</p>
+                      <button class="cart__del" type="button"><span class="visually-hidden">Удалить</span></button>
+                    </div>
+                  </div>
+                  <div class="cart__bottom-block">
+                    <button class="cart__button button button--red" type="button">Оформить заказ</button>
+                    <p class="cart__result text--big">Итого: <span class="cart__result--coast">790 ₽</span></p>
+                  </div>
+                </section>
+              </div>
+            </div>
           </li>
         </ul>
       </nav>
@@ -76,7 +152,9 @@
                   <p class="card__text text text--big">Натуральное мороженое из свежих сливок и&nbsp;молока с вкуснейшим клубничным джемом – это&nbsp;идеальный десерт для всей семьи.</p>
                   <button class="button button--white" type="button">Заказать</button>
                 </div>
-                <img class="card__image" src="images/slider/ice-1.png" alt="Нежный пломбир с клубничным джемом." width="328" height="507">
+                <div class="card__image-wrapper">
+                  <img class="card__image" src="images/slider/ice-1.png" alt="Нежный пломбир с клубничным джемом." width="328" height="507">
+                </div>
               </div>
             </li>
             <li class="slider__item">
@@ -86,7 +164,9 @@
                   <p class="card__text text text--big">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
                   <button class="button button--white" type="button">Заказать</button>
                 </div>
-                <img class="card__image" src="images/slider/ice-2.png" alt="Сливочное мороженое со вкусом банана." width="328" height="507">
+                <div class="card__image-wrapper">
+                  <img class="card__image" src="images/slider/ice-2.png" alt="Сливочное мороженое со вкусом банана." width="328" height="507">
+                </div>
               </div>
             </li>
             <li class="slider__item">
@@ -96,7 +176,9 @@
                   <p class="card__text text text--big">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
                   <button class="button button--white" type="button">Заказать</button>
                 </div>
-                <img class="card__image" src="images/slider/ice-3.png" alt="Карамельный пломбир с маршмеллоу." width="328" height="507">
+                <div class="card__image-wrapper">
+                  <img class="card__image" src="images/slider/ice-3.png" alt="Карамельный пломбир с маршмеллоу." width="328" height="507">
+                </div>
               </div>
             </li>
           </ul>
@@ -151,7 +233,7 @@
             </li>
           </ul>
         </section>
-        <section class="gifts mb--xl">
+        <section class="gifts">
           <h2 class="gifts__title title-h3">Заказывайте мороженое и получайте подарки!</h2>
           <ul class="gifts__items list">
             <li class="gifts__item gifts__item--one">
@@ -267,7 +349,7 @@
             <form class="subscribe-form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
               <p class="subscribe-form__text text">Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <label class="subscribe-form__label">
-                <input class="subscribe-form__input input" type="email" id="email" name="e-mail"  placeholder="email@example.com">
+                <input class="subscribe-form__input input" type="email" id="email" name="e-mail" placeholder="email@example.com">
               </label>
               <button class="button button--red subscribe-form__button" type="submit">Отправить</button>
             </form>
@@ -282,15 +364,40 @@
             <h2 class="visually-hidden">Форма доставки</h2>
             <p class="delivery-form__text text">Укажите адрес и дату доставки, и мы свяжемся с&nbsp;вами, чтобы подтвердить заказ.</p>
             <form class="delivery-form__block" action="https://echo.htmlacademy.ru/" method="post">
-              <label class="delivery-form__label delivery-form__label--date">Дата
-                <input class="delivery-form__input input" type="date" id="data" name="data">
-              </label>
-              <label class="delivery-form__label delivery-form__label--phone">Телефон
-                <input class="delivery-form__input input" type="tel" id="phone" name="phone">
-              </label>
-              <label class="delivery-form__label delivery-form__label--adress">Адрес
-                <input class="delivery-form__input input" type="text" id="adress" name="adress">
-              </label>
+              <p class="delivery-form__group delivery-form__group--date">
+                <span class="delivery-form__label-container">
+                  <label class="delivery-form__label" for="data">Дата</label>
+                  <span class="tooltip">
+                    <button class="tooltip__toggle" type="button" aria-labelledby="tooltip-label-date">
+                      <svg class="tooltip__icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00026 2.12502C4.30774 2.12502 2.12502 4.30774 2.12502 7.00026C2.12502 9.69278 4.30774 11.8755 7.00026 11.8755C9.69278 11.8755 11.8755 9.69278 11.8755 7.00026C11.8755 4.30774 9.69278 2.12502 7.00026 2.12502ZM0.791687 7.00026C0.791687 3.57136 3.57136 0.791687 7.00026 0.791687C10.4292 0.791687 13.2088 3.57136 13.2088 7.00026C13.2088 10.4292 10.4292 13.2088 7.00026 13.2088C3.57136 13.2088 0.791687 10.4292 0.791687 7.00026ZM7.00007 6.33334C7.36826 6.33334 7.66674 6.63182 7.66674 7.00001V9.21677C7.66674 9.58496 7.36826 9.88344 7.00007 9.88344C6.63188 9.88344 6.33341 9.58496 6.33341 9.21677V7.00001C6.33341 6.63182 6.63188 6.33334 7.00007 6.33334ZM7.00007 4.11659C6.63188 4.11659 6.33341 4.41506 6.33341 4.78325C6.33341 5.15144 6.63188 5.44992 7.00007 5.44992H7.0059C7.37409 5.44992 7.67257 5.15144 7.67257 4.78325C7.67257 4.41506 7.37409 4.11659 7.0059 4.11659H7.00007Z" fill="#2D3440"/>
+                        </svg>
+                    </button>
+                    <span class="tooltip__text" role="tooltip" id="tooltip-label-date">Укажите желаемую дату для доставки</span>
+                  </span>
+                </span>
+                <input class="delivery-form__input input" type="text" id="data" name="data" placeholder="01.04.2020">
+              </p>
+              <p class="delivery-form__group  delivery-form__group--phone">
+                <span class="delivery-form__label-container">
+                  <label class="delivery-form__label" for="phone">Телефон</label>
+                </span>
+                <input class="delivery-form__input input" type="tel" id="phone" name="phone" placeholder="+7 800 999-00-00">
+              </p>
+              <p class="delivery-form__group  delivery-form__group--adress">
+                <span class="delivery-form__label-container">
+                  <label class="delivery-form__label" for="adress">Адрес</label>
+                  <span class="tooltip">
+                    <button class="tooltip__toggle" type="button" aria-labelledby="tooltip-label-adress">
+                      <svg class="tooltip__icon" aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.00026 2.12502C4.30774 2.12502 2.12502 4.30774 2.12502 7.00026C2.12502 9.69278 4.30774 11.8755 7.00026 11.8755C9.69278 11.8755 11.8755 9.69278 11.8755 7.00026C11.8755 4.30774 9.69278 2.12502 7.00026 2.12502ZM0.791687 7.00026C0.791687 3.57136 3.57136 0.791687 7.00026 0.791687C10.4292 0.791687 13.2088 3.57136 13.2088 7.00026C13.2088 10.4292 10.4292 13.2088 7.00026 13.2088C3.57136 13.2088 0.791687 10.4292 0.791687 7.00026ZM7.00007 6.33334C7.36826 6.33334 7.66674 6.63182 7.66674 7.00001V9.21677C7.66674 9.58496 7.36826 9.88344 7.00007 9.88344C6.63188 9.88344 6.33341 9.58496 6.33341 9.21677V7.00001C6.33341 6.63182 6.63188 6.33334 7.00007 6.33334ZM7.00007 4.11659C6.63188 4.11659 6.33341 4.41506 6.33341 4.78325C6.33341 5.15144 6.63188 5.44992 7.00007 5.44992H7.0059C7.37409 5.44992 7.67257 5.15144 7.67257 4.78325C7.67257 4.41506 7.37409 4.11659 7.0059 4.11659H7.00007Z" fill="#2D3440"/>
+                        </svg>
+                    </button>
+                    <span class="tooltip__text" role="tooltip" id="tooltip-label-adress">Введите название улицы, дома и квартиры</span>
+                  </span>
+                </span>
+                <input class="delivery-form__input input" type="text" id="adress" name="adress" placeholder="ул. Большая Конюшенная, 19/8">
+              </p>
               <button class="button button--red delivery-form__button" type="submit">Отправить</button>
             </form>
           </div>
@@ -353,5 +460,26 @@
         <div class="page-footer__descr">Сделано в <a class="link" href="#">.html academy</a> © 2022</div>
       </div>
     </footer>
+    <div class="modal modal--close">
+      <div class="modal__container">
+        <button class="modal__close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal__content">
+          <h2 class="modal__title title-h4">Мы обязательно ответим вам!</h2>
+          <form action="https://echo.htmlacademy.ru/" method="post" class="question">
+            <label class="visually-hidden" for="question-name">Введите Имя и фамилию</label>
+            <input class="question__input input" type="text" id="question-name" name="name" placeholder="Имя и фамилия">
+            <label class="visually-hidden" for="question-email">Введите Email</label>
+            <input class="question__input input" type="email" id="question-email" name="email" placeholder="email@example.com">
+            <label class="visually-hidden" for="question-message">Введите Сообщение</label>
+            <textarea class="question__textarea input" name="message" id="question-message" placeholder="В свободной форме"></textarea>
+            <div class="question__button-wrapper">
+              <button class="button button--red question__button" type="submit">Отправить</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
 </html>
