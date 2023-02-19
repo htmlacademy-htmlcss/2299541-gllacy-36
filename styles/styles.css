@@ -545,7 +545,6 @@ body {
   top: 46.3%;
   width: 31%;
   left: 45.1%;
-  z-index: 3;
 }
 
 .slider-tab__button {
@@ -672,7 +671,7 @@ body {
 
 .card__image {
   width: 329px;
-  z-index: 2;
+  z-index: 1;
 }
 
 .card__image-wrapper {
@@ -687,7 +686,7 @@ body {
   height: 313px;
   border-radius: 50%;
   opacity: 0.5;
-  z-index: 1;
+  z-index: 0;
   top: 99px;
 }
 
@@ -1640,7 +1639,7 @@ body {
   position: absolute;
   right: 0;
   top: 40px;
-  z-index: 1;
+  z-index: 3;
   opacity: 0;
   visibility: hidden;
 }
