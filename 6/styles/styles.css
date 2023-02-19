@@ -1958,12 +1958,6 @@ body {
   visibility: visible;
 }
 
-.navigation__link--with-dropdown:focus-within,
-.navigation-with-logo__link:focus-within {
-  background: #FF4A78;
-  color: #ffffff;
-}
-
 .navigation__link--with-dropdown:focus-within .navigation__icon {
   transform: rotate(180deg);
 }
@@ -1992,6 +1986,37 @@ body {
 .navigation-with-logo__item:hover .popover {
   opacity: 1;
   visibility: visible;
+}
+
+/* что бы протестировать кнопки в меню с открытым поповером добавить класс active к navigation-with-logo__link и navigation__link*/
+.navigation__link--with-dropdown.active,
+.navigation-with-logo__link.active {
+  background: #FF4A78;
+  color: #ffffff;
+}
+
+.navigation__link--with-dropdown.active path,
+.navigation-with-logo__link.active path {
+  fill: #ffffff;
+}
+
+.navigation__link--with-dropdown.active svg {
+  transform: rotate(180deg);
+}
+
+.navigation__link--with-dropdown.active:hover,
+.navigation-with-logo__link.active:hover {
+  opacity: 0.6
+}
+
+.navigation__link--with-dropdown.active:focus,
+.navigation-with-logo__link.active:focus {
+  box-shadow: 0 0 0 2px #2D3440;
+}
+
+.navigation__link--with-dropdown.active:active,
+.navigation-with-logo__link.active:active {
+  opacity: 0.3;
 }
 
 .tooltip {
