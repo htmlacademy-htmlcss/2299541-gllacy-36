@@ -5,7 +5,7 @@
     <title>HTML Academy: Глейси-Каталог</title>
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-  <body>
+  <body class="red">
     <header class="page-header">
       <nav class="navigation container">
         <a class="navigation__logo" href="index.html">
@@ -13,15 +13,30 @@
         </a>
         <ul class="navigation__list list">
           <li class="navigation__item navigation__item--list">
-            <ul class="navigation-second list">
-              <li class="navigation-second__item">
-                <a class="navigation__link" href="#">Каталог
-                  <svg class="navigation-second__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.80799 6.19526C3.54764 5.93491 3.12553 5.93491 2.86518 6.19526C2.60483 6.45561 2.60483 6.87772 2.86518 7.13807L7.52553 11.7984C7.52759 11.8005 7.52967 11.8026 7.53177 11.8047C7.66246 11.9354 7.83392 12.0005 8.00521 12C8.17518 11.9995 8.34498 11.9344 8.47466 11.8047C8.47675 11.8027 8.47881 11.8006 8.48087 11.7985L13.1412 7.13807C13.4016 6.87772 13.4016 6.45561 13.1412 6.19526C12.8809 5.93491 12.4588 5.93491 12.1984 6.19526L8.00321 10.3905L3.80799 6.19526Z" fill="#2D3440"/>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            <span class="navigation__link navigation__link--with-dropdown">Каталог
+              <svg class="navigation__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.80799 6.19526C3.54764 5.93491 3.12553 5.93491 2.86518 6.19526C2.60483 6.45561 2.60483 6.87772 2.86518 7.13807L7.52553 11.7984C7.52759 11.8005 7.52967 11.8026 7.53177 11.8047C7.66246 11.9354 7.83392 12.0005 8.00521 12C8.17518 11.9995 8.34498 11.9344 8.47466 11.8047C8.47675 11.8027 8.47881 11.8006 8.48087 11.7985L13.1412 7.13807C13.4016 6.87772 13.4016 6.45561 13.1412 6.19526C12.8809 5.93491 12.4588 5.93491 12.1984 6.19526L8.00321 10.3905L3.80799 6.19526Z" fill="#2D3440"/>
+              </svg>
+            </span>
+            <div class="popover popover--dropdown">
+              <ul class="dropdown popover__content list">
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Новинки</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Сливочное</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Щербеты</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Фруктовый лед</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Мелорин</a>
+                </li>
+              </ul>
+            </div>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="#">Доставка и оплата</a>
@@ -37,10 +52,21 @@
               <span class="visually-hidden">
                 Поиск
               </span>
-              <svg class="icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="navigation-with-logo__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.66341 7.33008C2.66341 4.75275 4.75275 2.66341 7.33008 2.66341C9.90741 2.66341 11.9967 4.75275 11.9967 7.33008C11.9967 8.58735 11.4995 9.7285 10.691 10.5676C10.6682 10.5852 10.6462 10.6044 10.6253 10.6253C10.6044 10.6463 10.5852 10.6682 10.5676 10.6911C9.72847 11.4996 8.58734 11.9967 7.33008 11.9967C4.75275 11.9967 2.66341 9.90741 2.66341 7.33008ZM11.0752 12.018C10.0487 12.8391 8.74675 13.3301 7.33008 13.3301C4.01637 13.3301 1.33008 10.6438 1.33008 7.33008C1.33008 4.01637 4.01637 1.33008 7.33008 1.33008C10.6438 1.33008 13.3301 4.01637 13.3301 7.33008C13.3301 8.74676 12.8391 10.0488 12.018 11.0752L14.4681 13.5253C14.7285 13.7857 14.7285 14.2078 14.4681 14.4682C14.2078 14.7285 13.7857 14.7285 13.5253 14.4682L11.0752 12.018Z" fill="#2D3440"/>
               </svg>
             </a>
+            <div class="popover popover--search">
+              <div class="popover__content">
+                <form action="https://echo.htmlacademy.ru/" method="post" class="search">
+                  <label class="visually-hidden" for="search__input">Поиск</label>
+                  <input class="search__input input" type="search" id="search__input" placeholder="Поиск по сайту">
+                  <button class="search__close-button" type="reset">
+                    <span class="visually-hidden">Сбросить</span>
+                  </button>
+                </form>
+              </div>
+            </div>
           </li>
           <li class="navigation-with-logo__item">
             <a class="navigation-with-logo__link navigation-with-logo__link--icon-login" href="#">
@@ -49,6 +75,24 @@
               </svg>
               Вход
             </a>
+            <div class="popover popover--login">
+              <div class="popover__content">
+                <h2 class="popover__title title-h4">Личный кабинет</h2>
+                <form class="login" action="https://echo.htmlacademy.ru/" method="post">
+                  <label class="visually-hidden" for="login-email">Email</label>
+                  <input class="login__input input" type="email" id="login-email" name="email" placeholder="email@example.com">
+                  <label class="visually-hidden" for="login-pass">Пароль</label>
+                  <input class="login__input input" type="password" id="login-pass" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;">
+                  <div class="login__bottom-block">
+                    <button class="login__button button button--red" type="submit">Войти</button>
+                    <div class="login__link-block">
+                      <a class="login__link text--small" href="#">Забыли пароль?</a>
+                      <a class="login__link text--small" href="#">Регистрация</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </li>
           <li class="navigation-with-logo__item">
             <a class="navigation-with-logo__link navigation-with-logo__link--icon-cart" href="#">
@@ -58,8 +102,13 @@
               <svg class="navigation-with-logo__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.16667 1.25C0.798477 1.25 0.5 1.54848 0.5 1.91667C0.5 2.28486 0.798477 2.58333 1.16667 2.58333H2.93794L3.40537 4.91872C3.40821 4.93667 3.41176 4.95438 3.416 4.97182L4.38338 9.80515L4.3835 9.80571C4.46706 10.2257 4.69562 10.603 5.02921 10.8715C5.36111 11.1387 5.77595 11.2813 6.20183 11.2748H11.8225C12.2484 11.2813 12.6633 11.1387 12.9952 10.8715C13.3289 10.6029 13.5575 10.2254 13.641 9.80515L13.641 9.80515L13.642 9.80016L14.5691 4.93872C14.6063 4.74355 14.5545 4.54195 14.4279 4.38887C14.3012 4.23578 14.1129 4.14716 13.9142 4.14716H4.61072L4.1381 1.78583C4.07574 1.47426 3.80215 1.25 3.4844 1.25H1.16667ZM5.69098 9.54444L4.87759 5.4805H13.1084L12.3328 9.54736C12.31 9.65988 12.2485 9.7609 12.1591 9.83291C12.0691 9.90535 11.9565 9.94383 11.841 9.94162L11.841 9.94149H11.8282H6.19614V9.94137L6.18337 9.94162C6.06787 9.94383 5.95528 9.90535 5.8653 9.83291C5.77531 9.76048 5.71368 9.6587 5.69117 9.5454L5.69098 9.54444ZM4.55739 13.5054C4.55739 12.8175 5.1151 12.2597 5.80307 12.2597C6.49105 12.2597 7.04876 12.8175 7.04876 13.5054C7.04876 14.1934 6.49105 14.7511 5.80307 14.7511C5.1151 14.7511 4.55739 14.1934 4.55739 13.5054ZM10.9307 13.5054C10.9307 12.8175 11.4884 12.2597 12.1764 12.2597C12.8644 12.2597 13.4221 12.8175 13.4221 13.5054C13.4221 14.1934 12.8644 14.7511 12.1764 14.7511C11.4884 14.7511 10.9307 14.1934 10.9307 13.5054Z" fill="#2D3440"/>
               </svg>
-              2 товара
+              Нет товаров
             </a>
+            <div class="popover popover--cart popover--cart-null">
+              <div class="popover__content">
+                <h2 class="popover__title title-h4">Ваша корзина пока пуста</h2>
+              </div>
+            </div>
           </li>
         </ul>
       </nav>
@@ -67,7 +116,7 @@
     <main class="main-inner main-container">
       <div class="container">
         <header class="inner-header">
-          <ul class="breadcrumbs list mb--s">
+          <ul class="breadcrumbs list">
             <li class="breadcrumbs__item">
               <a class="breadcrumbs__link" href="index.html">Главная</a>
             </li>
@@ -92,30 +141,58 @@
                   <option value="expensive">по убыванию цены</option>
                 </select>
               </div>
-              <div class="filter-form__range">
-                <p class="filter-form__title text text--small">Цена: 100 ₽ – 500 ₽</p>
-              </div>
+              <fieldset class="filter-form__group filter-form__group--range">
+                <div class="filter-form__title text text--small">Цена:
+                  <label >
+                    <input class="filter-form__input" type="number" value="100" name="min-price"> ₽
+                  </label>
+                  <label>
+                    - <input class="filter-form__input" type="number" value="500" name="max-price"> ₽
+                  </label>
+                </div>
+                <div class="range">
+                  <div class="range__scale">
+                    <div class="range__bar" style="left: 30px; width: 66px">
+                      <button class="range__toggle range__toggle--min">
+                        <span class="visually-hidden">Изменить минимальную цену.</span>
+                      </button>
+                      <button class="range__toggle range__toggle--max">
+                        <span class="visually-hidden">Изменить максимальную цену.</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
               <fieldset class="filter-form__group filter-form__group--fat">
                 <legend class="filter-form__title text text--small">Жирность:</legend>
                 <ul class="filter-form__list list filter-form__list--fat">
                   <li class="filter-form__item">
                     <label class="control text text--small">
-                      <input class="control__input input" type="radio" name="fatness" value="0">0%
+                      <input class="control__input visually-hidden" type="radio" name="fatness" value="0">
+                      <span class="control__mark-radio"></span>
+                      </span>
+                      <span  class="control__label">0%</span>
                     </label>
                   </li>
                   <li class="filter-form__item">
                     <label class="control text text--small">
-                      <input class="control__input input" type="radio" name="fatness" value="max10" checked>до 10%
+                      <input class="control__input visually-hidden" type="radio" name="fatness" value="max10" checked>
+                      <span class="control__mark-radio"></span>
+                      <span  class="control__label">до 10%</span>
                     </label>
                   </li>
                   <li class="filter-form__item">
                     <label class="control text text--small">
-                      <input class="control__input input" type="radio" name="fatness" value="max30">до 30%
+                      <input class="control__input visually-hidden" type="radio" name="fatness" value="max30" disabled>
+                      <span class="control__mark-radio"></span>
+                      <span  class="control__label">до 30%</span>
                     </label>
                   </li>
                   <li class="filter-form__item">
                     <label class="control text text--small">
-                      <input class="control__input input" type="radio" name="fatness" value="min30">выше 30%
+                      <input class="control__input visually-hidden" type="radio" name="fatness" value="min30">
+                      <span class="control__mark-radio"></span>
+                      <span  class="control__label">выше 30%</span>
                     </label>
                   </li>
                 </ul>
@@ -127,27 +204,72 @@
                 <ul class="filter-form__list list filter-form__list--add">
                   <li class="filter-form__item">
                     <label class="control text text--small">
-                      <input class="control__input input" type="checkbox" name="chocolate" checked>шоколадные
+                      <input class="control__input visually-hidden" type="checkbox" name="chocolate" checked disabled>
+                      <span class="control__mark">
+                        <svg class="control__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.61513 1.61538C1.79569 1.43483 2.04057 1.33339 2.2959 1.33339H13.7029C13.9446 1.33339 14.0431 1.36192 14.0976 1.386C14.1553 1.4115 14.2281 1.45987 14.3836 1.61538C14.5908 1.82258 14.6656 2.04763 14.6656 2.29615V13.6647C14.6649 13.6771 14.6646 13.6896 14.6646 13.7021C14.6646 13.9574 14.5632 14.2023 14.3826 14.3829C14.2021 14.5634 13.9572 14.6648 13.7018 14.6648H2.2959C2.04057 14.6648 1.79569 14.5634 1.61513 14.3829C1.43458 14.2023 1.33315 13.9574 1.33315 13.7021V2.29615C1.33315 2.04081 1.43458 1.79593 1.61513 1.61538ZM15.8381 14.5437C15.7237 14.834 15.5503 15.1008 15.3254 15.3257C14.8948 15.7563 14.3108 15.9982 13.7018 15.9982H2.2959C1.68694 15.9982 1.10293 15.7563 0.672325 15.3257C0.241725 14.8951 -0.000183105 14.311 -0.000183105 13.7021V2.29615C-0.000183105 1.68719 0.241725 1.10317 0.672325 0.672569C0.898314 0.44658 1.16656 0.272564 1.45849 0.158214C1.57473 0.0595667 1.72523 6.10352e-05 1.88963 6.10352e-05H2.2959H13.7029C14.0403 6.10352e-05 14.3458 0.0379688 14.6365 0.166421C14.924 0.293453 15.1376 0.483702 15.3265 0.672572C15.808 1.15413 15.999 1.72995 15.999 2.29615V14.1094C15.999 14.2753 15.9384 14.4271 15.8381 14.5437Z" fill="#2D3440"/>
+                        </svg>
+                        <svg class="control__icon control__icon--checked icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.61532 1.61526C1.7958 1.43471 2.04051 1.33333 2.29562 1.33333H11.2545C11.6227 1.33333 11.9212 1.03486 11.9212 0.666667C11.9212 0.298477 11.6227 0 11.2545 0H2.29562C1.68671 0 1.10279 0.241993 0.672314 0.672654C0.241845 1.1033 6.10352e-05 1.68733 6.10352e-05 2.29624V13.7033C6.10352e-05 14.3122 0.241845 14.8962 0.672314 15.3269C1.10279 15.7575 1.68671 15.9995 2.29562 15.9995H13.6978C14.3067 15.9995 14.8907 15.7575 15.3211 15.3269C15.7516 14.8962 15.9934 14.3122 15.9934 13.7033V7.99976C15.9934 7.63157 15.6949 7.3331 15.3267 7.3331C14.9585 7.3331 14.6601 7.63157 14.6601 7.99976V13.7033C14.6601 13.9588 14.5586 14.2037 14.3781 14.3843C14.1977 14.5648 13.9529 14.6662 13.6978 14.6662H2.29562C2.04051 14.6662 1.7958 14.5648 1.61532 14.3843C1.43484 14.2037 1.33339 13.9588 1.33339 13.7033V2.29624C1.33339 2.04077 1.43484 1.79582 1.61532 1.61526ZM15.8167 1.9404C16.0699 1.6731 16.0585 1.25115 15.7912 0.997933C15.5239 0.74472 15.1019 0.756136 14.8487 1.02343L7.61408 8.66042L5.78248 6.72695C5.52927 6.45966 5.10732 6.44824 4.84002 6.70145C4.57272 6.95467 4.56131 7.37662 4.81452 7.64392L7.1301 10.0883C7.256 10.2212 7.43101 10.2965 7.61408 10.2965C7.79715 10.2965 7.97216 10.2212 8.09806 10.0883L15.8167 1.9404Z" fill="#2D3440"/>
+                        </svg>
+                      </span>
+                      <span  class="control__label">шоколадные</span>
                     </label>
                   </li>
                   <li class="filter-form__item">
                     <label class="control text text--small">
-                      <input class="control__input input" type="checkbox" name="sugar-sprinkles" checked>сахарные посыпки
+                      <input class="control__input visually-hidden" type="checkbox" name="sugar-sprinkles" checked>
+                      <span class="control__mark">
+                        <svg class="control__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.61513 1.61538C1.79569 1.43483 2.04057 1.33339 2.2959 1.33339H13.7029C13.9446 1.33339 14.0431 1.36192 14.0976 1.386C14.1553 1.4115 14.2281 1.45987 14.3836 1.61538C14.5908 1.82258 14.6656 2.04763 14.6656 2.29615V13.6647C14.6649 13.6771 14.6646 13.6896 14.6646 13.7021C14.6646 13.9574 14.5632 14.2023 14.3826 14.3829C14.2021 14.5634 13.9572 14.6648 13.7018 14.6648H2.2959C2.04057 14.6648 1.79569 14.5634 1.61513 14.3829C1.43458 14.2023 1.33315 13.9574 1.33315 13.7021V2.29615C1.33315 2.04081 1.43458 1.79593 1.61513 1.61538ZM15.8381 14.5437C15.7237 14.834 15.5503 15.1008 15.3254 15.3257C14.8948 15.7563 14.3108 15.9982 13.7018 15.9982H2.2959C1.68694 15.9982 1.10293 15.7563 0.672325 15.3257C0.241725 14.8951 -0.000183105 14.311 -0.000183105 13.7021V2.29615C-0.000183105 1.68719 0.241725 1.10317 0.672325 0.672569C0.898314 0.44658 1.16656 0.272564 1.45849 0.158214C1.57473 0.0595667 1.72523 6.10352e-05 1.88963 6.10352e-05H2.2959H13.7029C14.0403 6.10352e-05 14.3458 0.0379688 14.6365 0.166421C14.924 0.293453 15.1376 0.483702 15.3265 0.672572C15.808 1.15413 15.999 1.72995 15.999 2.29615V14.1094C15.999 14.2753 15.9384 14.4271 15.8381 14.5437Z" fill="#2D3440"/>
+                        </svg>
+                        <svg class="control__icon control__icon--checked icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.61532 1.61526C1.7958 1.43471 2.04051 1.33333 2.29562 1.33333H11.2545C11.6227 1.33333 11.9212 1.03486 11.9212 0.666667C11.9212 0.298477 11.6227 0 11.2545 0H2.29562C1.68671 0 1.10279 0.241993 0.672314 0.672654C0.241845 1.1033 6.10352e-05 1.68733 6.10352e-05 2.29624V13.7033C6.10352e-05 14.3122 0.241845 14.8962 0.672314 15.3269C1.10279 15.7575 1.68671 15.9995 2.29562 15.9995H13.6978C14.3067 15.9995 14.8907 15.7575 15.3211 15.3269C15.7516 14.8962 15.9934 14.3122 15.9934 13.7033V7.99976C15.9934 7.63157 15.6949 7.3331 15.3267 7.3331C14.9585 7.3331 14.6601 7.63157 14.6601 7.99976V13.7033C14.6601 13.9588 14.5586 14.2037 14.3781 14.3843C14.1977 14.5648 13.9529 14.6662 13.6978 14.6662H2.29562C2.04051 14.6662 1.7958 14.5648 1.61532 14.3843C1.43484 14.2037 1.33339 13.9588 1.33339 13.7033V2.29624C1.33339 2.04077 1.43484 1.79582 1.61532 1.61526ZM15.8167 1.9404C16.0699 1.6731 16.0585 1.25115 15.7912 0.997933C15.5239 0.74472 15.1019 0.756136 14.8487 1.02343L7.61408 8.66042L5.78248 6.72695C5.52927 6.45966 5.10732 6.44824 4.84002 6.70145C4.57272 6.95467 4.56131 7.37662 4.81452 7.64392L7.1301 10.0883C7.256 10.2212 7.43101 10.2965 7.61408 10.2965C7.79715 10.2965 7.97216 10.2212 8.09806 10.0883L15.8167 1.9404Z" fill="#2D3440"/>
+                        </svg>
+                      </span>
+                      <span  class="control__label">сахарные посыпки</span>
                     </label>
                   </li>
                   <li class="filter-form__item">
                     <label class="control text text--small">
-                      <input class="control__input input" type="checkbox" name="fruits">фрукты
+                      <input class="control__input visually-hidden" type="checkbox" name="fruits" disabled>
+                      <span class="control__mark">
+                        <svg class="control__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.61513 1.61538C1.79569 1.43483 2.04057 1.33339 2.2959 1.33339H13.7029C13.9446 1.33339 14.0431 1.36192 14.0976 1.386C14.1553 1.4115 14.2281 1.45987 14.3836 1.61538C14.5908 1.82258 14.6656 2.04763 14.6656 2.29615V13.6647C14.6649 13.6771 14.6646 13.6896 14.6646 13.7021C14.6646 13.9574 14.5632 14.2023 14.3826 14.3829C14.2021 14.5634 13.9572 14.6648 13.7018 14.6648H2.2959C2.04057 14.6648 1.79569 14.5634 1.61513 14.3829C1.43458 14.2023 1.33315 13.9574 1.33315 13.7021V2.29615C1.33315 2.04081 1.43458 1.79593 1.61513 1.61538ZM15.8381 14.5437C15.7237 14.834 15.5503 15.1008 15.3254 15.3257C14.8948 15.7563 14.3108 15.9982 13.7018 15.9982H2.2959C1.68694 15.9982 1.10293 15.7563 0.672325 15.3257C0.241725 14.8951 -0.000183105 14.311 -0.000183105 13.7021V2.29615C-0.000183105 1.68719 0.241725 1.10317 0.672325 0.672569C0.898314 0.44658 1.16656 0.272564 1.45849 0.158214C1.57473 0.0595667 1.72523 6.10352e-05 1.88963 6.10352e-05H2.2959H13.7029C14.0403 6.10352e-05 14.3458 0.0379688 14.6365 0.166421C14.924 0.293453 15.1376 0.483702 15.3265 0.672572C15.808 1.15413 15.999 1.72995 15.999 2.29615V14.1094C15.999 14.2753 15.9384 14.4271 15.8381 14.5437Z" fill="#2D3440"/>
+                        </svg>
+                        <svg class="control__icon control__icon--checked icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.61532 1.61526C1.7958 1.43471 2.04051 1.33333 2.29562 1.33333H11.2545C11.6227 1.33333 11.9212 1.03486 11.9212 0.666667C11.9212 0.298477 11.6227 0 11.2545 0H2.29562C1.68671 0 1.10279 0.241993 0.672314 0.672654C0.241845 1.1033 6.10352e-05 1.68733 6.10352e-05 2.29624V13.7033C6.10352e-05 14.3122 0.241845 14.8962 0.672314 15.3269C1.10279 15.7575 1.68671 15.9995 2.29562 15.9995H13.6978C14.3067 15.9995 14.8907 15.7575 15.3211 15.3269C15.7516 14.8962 15.9934 14.3122 15.9934 13.7033V7.99976C15.9934 7.63157 15.6949 7.3331 15.3267 7.3331C14.9585 7.3331 14.6601 7.63157 14.6601 7.99976V13.7033C14.6601 13.9588 14.5586 14.2037 14.3781 14.3843C14.1977 14.5648 13.9529 14.6662 13.6978 14.6662H2.29562C2.04051 14.6662 1.7958 14.5648 1.61532 14.3843C1.43484 14.2037 1.33339 13.9588 1.33339 13.7033V2.29624C1.33339 2.04077 1.43484 1.79582 1.61532 1.61526ZM15.8167 1.9404C16.0699 1.6731 16.0585 1.25115 15.7912 0.997933C15.5239 0.74472 15.1019 0.756136 14.8487 1.02343L7.61408 8.66042L5.78248 6.72695C5.52927 6.45966 5.10732 6.44824 4.84002 6.70145C4.57272 6.95467 4.56131 7.37662 4.81452 7.64392L7.1301 10.0883C7.256 10.2212 7.43101 10.2965 7.61408 10.2965C7.79715 10.2965 7.97216 10.2212 8.09806 10.0883L15.8167 1.9404Z" fill="#2D3440"/>
+                        </svg>
+                      </span>
+                      <span  class="control__label">фрукты</span>
                     </label>
                   </li>
                   <li class="filter-form__item">
                     <label class="control text text--small">
-                      <input class="control__input input" type="checkbox" name="syrups">сиропы
+                      <input class="control__input visually-hidden" type="checkbox" name="syrups">
+                      <span class="control__mark">
+                        <svg class="control__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.61513 1.61538C1.79569 1.43483 2.04057 1.33339 2.2959 1.33339H13.7029C13.9446 1.33339 14.0431 1.36192 14.0976 1.386C14.1553 1.4115 14.2281 1.45987 14.3836 1.61538C14.5908 1.82258 14.6656 2.04763 14.6656 2.29615V13.6647C14.6649 13.6771 14.6646 13.6896 14.6646 13.7021C14.6646 13.9574 14.5632 14.2023 14.3826 14.3829C14.2021 14.5634 13.9572 14.6648 13.7018 14.6648H2.2959C2.04057 14.6648 1.79569 14.5634 1.61513 14.3829C1.43458 14.2023 1.33315 13.9574 1.33315 13.7021V2.29615C1.33315 2.04081 1.43458 1.79593 1.61513 1.61538ZM15.8381 14.5437C15.7237 14.834 15.5503 15.1008 15.3254 15.3257C14.8948 15.7563 14.3108 15.9982 13.7018 15.9982H2.2959C1.68694 15.9982 1.10293 15.7563 0.672325 15.3257C0.241725 14.8951 -0.000183105 14.311 -0.000183105 13.7021V2.29615C-0.000183105 1.68719 0.241725 1.10317 0.672325 0.672569C0.898314 0.44658 1.16656 0.272564 1.45849 0.158214C1.57473 0.0595667 1.72523 6.10352e-05 1.88963 6.10352e-05H2.2959H13.7029C14.0403 6.10352e-05 14.3458 0.0379688 14.6365 0.166421C14.924 0.293453 15.1376 0.483702 15.3265 0.672572C15.808 1.15413 15.999 1.72995 15.999 2.29615V14.1094C15.999 14.2753 15.9384 14.4271 15.8381 14.5437Z" fill="#2D3440"/>
+                        </svg>
+                        <svg class="control__icon control__icon--checked icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.61532 1.61526C1.7958 1.43471 2.04051 1.33333 2.29562 1.33333H11.2545C11.6227 1.33333 11.9212 1.03486 11.9212 0.666667C11.9212 0.298477 11.6227 0 11.2545 0H2.29562C1.68671 0 1.10279 0.241993 0.672314 0.672654C0.241845 1.1033 6.10352e-05 1.68733 6.10352e-05 2.29624V13.7033C6.10352e-05 14.3122 0.241845 14.8962 0.672314 15.3269C1.10279 15.7575 1.68671 15.9995 2.29562 15.9995H13.6978C14.3067 15.9995 14.8907 15.7575 15.3211 15.3269C15.7516 14.8962 15.9934 14.3122 15.9934 13.7033V7.99976C15.9934 7.63157 15.6949 7.3331 15.3267 7.3331C14.9585 7.3331 14.6601 7.63157 14.6601 7.99976V13.7033C14.6601 13.9588 14.5586 14.2037 14.3781 14.3843C14.1977 14.5648 13.9529 14.6662 13.6978 14.6662H2.29562C2.04051 14.6662 1.7958 14.5648 1.61532 14.3843C1.43484 14.2037 1.33339 13.9588 1.33339 13.7033V2.29624C1.33339 2.04077 1.43484 1.79582 1.61532 1.61526ZM15.8167 1.9404C16.0699 1.6731 16.0585 1.25115 15.7912 0.997933C15.5239 0.74472 15.1019 0.756136 14.8487 1.02343L7.61408 8.66042L5.78248 6.72695C5.52927 6.45966 5.10732 6.44824 4.84002 6.70145C4.57272 6.95467 4.56131 7.37662 4.81452 7.64392L7.1301 10.0883C7.256 10.2212 7.43101 10.2965 7.61408 10.2965C7.79715 10.2965 7.97216 10.2212 8.09806 10.0883L15.8167 1.9404Z" fill="#2D3440"/>
+                        </svg>
+                      </span>
+                      <span  class="control__label">сиропы</span>
                     </label>
                   </li>
                   <li class="filter-form__item">
                     <label class="control text text--small">
-                      <input class="control__input input" type="checkbox" name="jams">джемы
+                      <input class="control__input visually-hidden" type="checkbox" name="jams">
+                      <span class="control__mark">
+                        <svg class="control__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.61513 1.61538C1.79569 1.43483 2.04057 1.33339 2.2959 1.33339H13.7029C13.9446 1.33339 14.0431 1.36192 14.0976 1.386C14.1553 1.4115 14.2281 1.45987 14.3836 1.61538C14.5908 1.82258 14.6656 2.04763 14.6656 2.29615V13.6647C14.6649 13.6771 14.6646 13.6896 14.6646 13.7021C14.6646 13.9574 14.5632 14.2023 14.3826 14.3829C14.2021 14.5634 13.9572 14.6648 13.7018 14.6648H2.2959C2.04057 14.6648 1.79569 14.5634 1.61513 14.3829C1.43458 14.2023 1.33315 13.9574 1.33315 13.7021V2.29615C1.33315 2.04081 1.43458 1.79593 1.61513 1.61538ZM15.8381 14.5437C15.7237 14.834 15.5503 15.1008 15.3254 15.3257C14.8948 15.7563 14.3108 15.9982 13.7018 15.9982H2.2959C1.68694 15.9982 1.10293 15.7563 0.672325 15.3257C0.241725 14.8951 -0.000183105 14.311 -0.000183105 13.7021V2.29615C-0.000183105 1.68719 0.241725 1.10317 0.672325 0.672569C0.898314 0.44658 1.16656 0.272564 1.45849 0.158214C1.57473 0.0595667 1.72523 6.10352e-05 1.88963 6.10352e-05H2.2959H13.7029C14.0403 6.10352e-05 14.3458 0.0379688 14.6365 0.166421C14.924 0.293453 15.1376 0.483702 15.3265 0.672572C15.808 1.15413 15.999 1.72995 15.999 2.29615V14.1094C15.999 14.2753 15.9384 14.4271 15.8381 14.5437Z" fill="#2D3440"/>
+                        </svg>
+                        <svg class="control__icon control__icon--checked icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M1.61532 1.61526C1.7958 1.43471 2.04051 1.33333 2.29562 1.33333H11.2545C11.6227 1.33333 11.9212 1.03486 11.9212 0.666667C11.9212 0.298477 11.6227 0 11.2545 0H2.29562C1.68671 0 1.10279 0.241993 0.672314 0.672654C0.241845 1.1033 6.10352e-05 1.68733 6.10352e-05 2.29624V13.7033C6.10352e-05 14.3122 0.241845 14.8962 0.672314 15.3269C1.10279 15.7575 1.68671 15.9995 2.29562 15.9995H13.6978C14.3067 15.9995 14.8907 15.7575 15.3211 15.3269C15.7516 14.8962 15.9934 14.3122 15.9934 13.7033V7.99976C15.9934 7.63157 15.6949 7.3331 15.3267 7.3331C14.9585 7.3331 14.6601 7.63157 14.6601 7.99976V13.7033C14.6601 13.9588 14.5586 14.2037 14.3781 14.3843C14.1977 14.5648 13.9529 14.6662 13.6978 14.6662H2.29562C2.04051 14.6662 1.7958 14.5648 1.61532 14.3843C1.43484 14.2037 1.33339 13.9588 1.33339 13.7033V2.29624C1.33339 2.04077 1.43484 1.79582 1.61532 1.61526ZM15.8167 1.9404C16.0699 1.6731 16.0585 1.25115 15.7912 0.997933C15.5239 0.74472 15.1019 0.756136 14.8487 1.02343L7.61408 8.66042L5.78248 6.72695C5.52927 6.45966 5.10732 6.44824 4.84002 6.70145C4.57272 6.95467 4.56131 7.37662 4.81452 7.64392L7.1301 10.0883C7.256 10.2212 7.43101 10.2965 7.61408 10.2965C7.79715 10.2965 7.97216 10.2212 8.09806 10.0883L15.8167 1.9404Z" fill="#2D3440"/>
+                        </svg>
+                      </span>
+                      <span  class="control__label">джемы</span>
                     </label>
                   </li>
                 </ul>
@@ -445,7 +567,7 @@
         <a class="page-footer__logo mb--xs" href="https://htmlacademy.ru/" target="_blank">
           <img src="images/icons/logo-htmlacademy.svg" alt="Логотип html academy." width="93" height="27">
         </a>
-        <div class="page-footer__descr">Сделано в <a class="link" href="#">.html academy</a> © 2022</div>
+        <div class="page-footer__descr">Сделано в <a class="link page-footer__link" href="#">.html academy</a> © 2022</div>
       </div>
     </footer>
 </html>
