@@ -61,7 +61,7 @@
               <div class="popover__content">
                 <form action="https://echo.htmlacademy.ru/" method="post" class="search">
                   <label class="visually-hidden" for="search__input">Поиск</label>
-                  <input class="search__input input" type="text" id="search__input" placeholder="Поиск по сайту">
+                  <input class="search__input input" type="search" id="search__input" name="search" placeholder="Поиск по сайту">
                   <button class="search__close-button" type="reset">
                     <span class="visually-hidden">Сбросить</span>
                   </button>
@@ -81,11 +81,11 @@
                 <h2 class="popover__title title-h4">Личный кабинет</h2>
                 <form class="login" action="https://echo.htmlacademy.ru/" method="post">
                   <label class="visually-hidden" for="login-email">Email</label>
-                  <input class="login__input input" type="email" id="login-email" placeholder="email@example.com">
+                  <input class="login__input input" type="email" id="login-email" name="email" placeholder="email@example.com">
                   <label class="visually-hidden" for="login-pass">Пароль</label>
-                  <input class="login__input input" type="password" id="login-pass" placeholder="....">
+                  <input class="login__input input" type="password" id="login-pass" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;">
                   <div class="login__bottom-block">
-                    <button class="login__button button button--red" type="button">Войти</button>
+                    <button class="login__button button button--red" type="submit">Войти</button>
                     <div class="login__link-block">
                       <a class="login__link text--small" href="#">Забыли пароль?</a>
                       <a class="login__link text--small" href="#">Регистрация</a>
@@ -95,7 +95,6 @@
               </div>
             </div>
           </li>
-
           <li class="navigation-with-logo__item">
             <a class="navigation-with-logo__link navigation-with-logo__link--icon-cart" href="#">
               <span class="visually-hidden">
@@ -112,21 +111,29 @@
                 <section class="cart">
                   <div class="cart__container">
                     <div class="cart__item">
-                      <img class="cart__image" src="images/catalog/ice-12.jpg" alt="Сливочное мороженое с малиновым джемом." width="46" height="46">
+                      <a class="cart__link" href="#">
+                        <img class="cart__image" src="images/catalog/ice-12.jpg" alt="Сливочное мороженое с малиновым джемом." width="46" height="46">
+                      </a>
                       <div class="cart__info">
-                        <h3 class="cart__title text--big">Малинка</h3>
+                        <a class="cart__link" href="#">
+                          <h3 class="cart__title text--big">Малинка</h3>
+                        </a>
                         <p class="cart__text text--small">1 кг х 310 ₽</p>
                       </div>
-                      <p class="cart__coast text--big">310 ₽</p>
+                      <p class="cart__coast text--big">310&nbsp;₽</p>
                       <button class="cart__del" type="button"><span class="visually-hidden">Удалить</span></button>
                     </div>
                     <div class="cart__item">
-                      <img class="cart__image" src="images/catalog/ice-3.jpg" alt="Ванильный пломбир со сладкой посыпкой." width="46" height="46">
+                      <a class="cart__link" href="#">
+                        <img class="cart__image" src="images/catalog/ice-3.jpg" alt="Ванильный пломбир со сладкой посыпкой." width="46" height="46">
+                      </a>
                       <div class="cart__info">
-                        <h3 class="cart__title text--big">Бабл-гам</h3>
+                        <a class="cart__link" href="#">
+                          <h3 class="cart__title text--big">Бабл-гам</h3>
+                        </a>
                         <p class="cart__text text--small">1,5 кг х 320 ₽</p>
                       </div>
-                      <p class="cart__coast text--big">480 ₽</p>
+                      <p class="cart__coast text--big">480&nbsp;₽</p>
                       <button class="cart__del" type="button"><span class="visually-hidden">Удалить</span></button>
                     </div>
                   </div>
@@ -344,7 +351,7 @@
         <div class="wrapper mb--xl">
           <section class="news">
             <p class="news__text text">Новое в нашем блоге</p>
-            <h2 class="news__title title-h4"><a class="link" href="#">10 способов сервировки фруктовых щербетов к&nbsp;столу</a></h2>
+            <h2 class="news__title title-h4"><a class="link news__link" href="#">10 способов сервировки фруктовых щербетов к&nbsp;столу</a></h2>
           </section>
           <div class="subscribe-form">
             <form class="subscribe-form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
@@ -458,7 +465,7 @@
         <a class="page-footer__logo mb--xs" href="https://htmlacademy.ru/" target="_blank">
           <img src="images/icons/logo-htmlacademy.svg" alt="Логотип html academy." width="93" height="27">
         </a>
-        <div class="page-footer__descr">Сделано в <a class="link" href="#">.html academy</a> © 2022</div>
+        <div class="page-footer__descr">Сделано в <a class="link page-footer__link" href="#">.html academy</a> © 2022</div>
       </div>
     </footer>
     <div class="modal modal--close">
