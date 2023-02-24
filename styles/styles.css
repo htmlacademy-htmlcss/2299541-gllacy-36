@@ -54,7 +54,7 @@ img {
   background-color: #feafc3;
 }
 
-.red::after {
+.red .card__image-wrapper::after {
   background-color: #ffcbd8;
 }
 
@@ -62,7 +62,7 @@ img {
   background: #fcc850;
 }
 
-.yellow::after {
+.yellow .card__image-wrapper::after {
   background: #fcdc92;
 }
 
@@ -70,7 +70,7 @@ img {
   background: #69a9ff;
 }
 
-.blue::after {
+.blue .card__image-wrapper::after {
   background: #9fc8ff;
 }
 
@@ -351,6 +351,10 @@ img {
   grid-template-columns: 570px 570px;
 }
 
+.wrapper--news {
+  margin-bottom: 80px;
+}
+
 .icon {
   position: absolute;
   top: 0;
@@ -548,9 +552,30 @@ img {
 }
 
 .slider__item:not(.active) .card__image-wrapper {
-  transform: scale(0.3);
   width: 100px;
   justify-content: center;
+}
+
+.slider__item.active .card__image-wrapper::after {
+  position: absolute;
+  content: "";
+  width: 329px;
+  height: 313px;
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: 0;
+  top: 99px;
+}
+
+.slider__item:not(.active) .card__image-wrapper::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  opacity: 0.5;
+  z-index: 0;
+  top: 203px;
 }
 
 /* slider tab */
@@ -680,6 +705,10 @@ img {
   margin-right: 4px;
 }
 
+.card__title {
+  margin-bottom: 25px;
+}
+
 .card__text {
   color: #2d3440;
   margin-bottom: 47px;
@@ -695,20 +724,12 @@ img {
   display: flex;
 }
 
-.card__image-wrapper::after {
-  position: absolute;
-  content: "";
-  width: 329px;
-  height: 313px;
-  border-radius: 50%;
-  opacity: 0.5;
-  z-index: 0;
-  top: 99px;
-}
-
 /* социальные сети */
 .social {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 200px;
+  gap: 10px;
 }
 
 .social--footer {
@@ -720,12 +741,7 @@ img {
 }
 
 .social__item {
-  margin-right: 11px;
   position: relative;
-}
-
-.social__item:last-child {
-  margin-right: 0;
 }
 
 .social__link {
@@ -803,6 +819,10 @@ img {
 }
 
 /* каталог */
+.catalog {
+  margin-bottom: 80px;
+}
+
 .catalog__title {
   max-width: 527px;
   margin-left: auto;
@@ -843,6 +863,11 @@ img {
 
 .catalog__link {
   text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.catalog__link--text {
+  margin-bottom: 8px;
 }
 
 .catalog__subtitle {
@@ -856,6 +881,7 @@ img {
 .catalog__text {
   display: block;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .catalog__image {
@@ -947,6 +973,7 @@ img {
   background-size: cover;
   border-radius: 16px;
   padding: 24px;
+  margin-bottom: 80px;
 }
 
 .info__wrapper {
@@ -1076,6 +1103,7 @@ img {
   display: flex;
   justify-content: space-between;
   padding: 64px;
+  margin-bottom: 80px;
 }
 
 .delivery__about {
@@ -1224,6 +1252,10 @@ img {
   width: 195px;
 }
 
+.page-footer__logo {
+  margin-bottom: 8px;
+}
+
 .footer-menu {
   margin-left: 50px;
   width: 357px;
@@ -1255,7 +1287,7 @@ img {
   position: relative;
 }
 
-.footer-menu__with-icon-like::before {
+.footer-menu__link--bold::before {
   display: inline-block;
   content: "";
   background-image: url("../images/icons/heart-fill.svg");
@@ -1854,6 +1886,7 @@ img {
   margin: 0;
   margin-bottom: 3px;
   position: relative;
+  color: #2d3440;
 }
 
 .cart__del {
@@ -1892,6 +1925,7 @@ img {
   margin: 0;
   margin-bottom: 3px;
   display: block;
+  color: #2d3440;
 }
 
 .cart__text {
@@ -1906,6 +1940,7 @@ img {
   align-self: center;
   display: flex;
   flex-wrap: wrap;
+  color: #2d3440;
 }
 
 .cart__bottom-block {
