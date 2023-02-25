@@ -49,7 +49,7 @@ img {
   object-fit: contain;
 }
 
-/* классы для смены цветового оформления сайта yellow , blue*/
+/* классы для смены цветового оформления сайта red, yellow, blue*/
 .red {
   background-color: #feafc3;
 }
