@@ -402,6 +402,14 @@ img {
   border-bottom: 2px solid #756257;
 }
 
+.navigation__link--with-dropdown {
+  border: none;
+  background: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Inter", sans-serif;
+}
+
 .navigation__icon {
   fill: #2d3440;
   position: relative;
@@ -562,6 +570,7 @@ img {
   top: 45.8%;
   width: 31%;
   left: 45.1%;
+  z-index: 4;
 }
 
 .slider-tab__button {
@@ -574,6 +583,7 @@ img {
   background-position: center;
   position: relative;
   cursor: pointer;
+  padding: 0;
 }
 
 .slider-tab__button:hover {
@@ -629,7 +639,6 @@ img {
 
 .slider__dots {
   display: flex;
-  /* margin-top: 3px; */
   flex-wrap: wrap;
 }
 
@@ -1582,19 +1591,24 @@ img {
   content: "";
 }
 
-.control:hover .control__input[type="radio"]:checked:not(:disabled) + .control__mark-radio,
 .control:hover .control__input[type="radio"]:not(:disabled) + .control__mark-radio {
   border-color: #fcfcfc;
 }
 
-.control:hover .control__input[type="radio"]:checked:not(:disabled) + .control__mark-radio::before,
 .control:hover .control__input[type="radio"]:not(:disabled) + .control__mark-radio::before {
   background-color: #fcfcfc;
 }
 
-.control:hover .control__input[type="checkbox"]:not(:disabled) + .control__mark path,
-.control:hover .control__input[type="checkbox"]:checked:not(:disabled) + .control__mark path {
+.control:hover .control__input[type="checkbox"]:not(:disabled) + .control__mark path {
   fill: #fcfcfc;
+}
+
+.control:focus-within .control__input[type="radio"] + .control__mark-radio {
+  box-shadow: 0 0 2px 1px #2d3440;
+}
+
+.control:focus-within .control__input[type="checkbox"] + .control__mark .control__icon {
+  box-shadow: 0 0 2px 1px #2d3440;
 }
 
 .wrapper-pagination {
