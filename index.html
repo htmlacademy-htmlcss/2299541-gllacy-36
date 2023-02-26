@@ -62,7 +62,7 @@
               <div class="popover__content">
                 <form action="https://echo.htmlacademy.ru/" method="post" class="search">
                   <label class="visually-hidden" for="search__input">Поиск</label>
-                  <input class="search__input input" type="search" id="search__input" name="search" placeholder="Поиск по сайту">
+                  <input class="search__input input" type="search" id="search__input" name="search" placeholder="Поиск по сайту" required>
                   <button class="search__close-button" type="reset">
                     <span class="visually-hidden">Сбросить</span>
                   </button>
@@ -82,9 +82,9 @@
                 <h2 class="popover__title title-h4">Личный кабинет</h2>
                 <form class="login" action="https://echo.htmlacademy.ru/" method="post">
                   <label class="visually-hidden" for="login-email">Email</label>
-                  <input class="login__input input" type="email" id="login-email" name="email" placeholder="email@example.com">
+                  <input class="login__input input" type="email" id="login-email" name="email" placeholder="email@example.com" required>
                   <label class="visually-hidden" for="login-pass">Пароль</label>
-                  <input class="login__input input" type="password" id="login-pass" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;">
+                  <input class="login__input input" type="password" id="login-pass" name="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" required>
                   <div class="login__bottom-block">
                     <button class="login__button button button--red" type="submit">Войти</button>
                     <div class="login__link-block">
@@ -383,7 +383,7 @@
             <form class="subscribe-form__wrapper" action="https://echo.htmlacademy.ru/" method="post">
               <p class="subscribe-form__text text">Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
               <label class="subscribe-form__label">
-                <input class="subscribe-form__input input" type="email" id="email" name="e-mail" placeholder="email@example.com">
+                <input class="subscribe-form__input input" type="email" id="email" name="e-mail" placeholder="email@example.com" required>
               </label>
               <button class="button button--red subscribe-form__button" type="submit">Отправить</button>
             </form>
@@ -410,13 +410,13 @@
                     <span class="tooltip__text" role="tooltip" id="tooltip-label-date">Укажите желаемую дату для доставки</span>
                   </span>
                 </span>
-                <input class="delivery-form__input input" type="text" id="data" name="data" placeholder="01.04.2020">
+                <input class="delivery-form__input input" type="text" id="data" name="data" placeholder="01.04.2020" required>
               </p>
               <p class="delivery-form__group  delivery-form__group--phone">
                 <span class="delivery-form__label-container">
                   <label class="delivery-form__label" for="phone">Телефон</label>
                 </span>
-                <input class="delivery-form__input input" type="tel" id="phone" name="phone" placeholder="+7 800 999-00-00">
+                <input class="delivery-form__input input" type="tel" id="phone" name="phone" placeholder="+7 800 999-00-00" required>
               </p>
               <p class="delivery-form__group  delivery-form__group--adress">
                 <span class="delivery-form__label-container">
@@ -430,7 +430,7 @@
                     <span class="tooltip__text" role="tooltip" id="tooltip-label-adress">Введите название улицы, дома и квартиры</span>
                   </span>
                 </span>
-                <input class="delivery-form__input input" type="text" id="adress" name="adress" placeholder="ул. Большая Конюшенная, 19/8">
+                <input class="delivery-form__input input" type="text" id="adress" name="adress" placeholder="ул. Большая Конюшенная, 19/8" required>
               </p>
               <button class="button button--red delivery-form__button" type="submit">Отправить</button>
             </form>
@@ -444,7 +444,7 @@
             <p class="contacts__text text">Для заказов по телефону:</p>
             <a class="contacts__phone link" href="tel:+78128121212">+7 (812) 812-12-12</a>
             <p class="contacts__text text text--small contacts__text--small">(с 10 до 20 ежедневно)</p>
-            <button class="button button--red contacts__button" type="button">Форма обратной связи</button>
+            <a class="button button--red contacts__button" href="#">Форма обратной связи</a>
           </div>
         </section>
       </div>
@@ -506,11 +506,11 @@
           <h2 class="modal__title title-h4">Мы обязательно ответим вам!</h2>
           <form action="https://echo.htmlacademy.ru/" method="post" class="question">
             <label class="visually-hidden" for="question-name">Введите Имя и фамилию</label>
-            <input class="question__input input" type="text" id="question-name" name="name" placeholder="Имя и фамилия">
+            <input class="question__input input" type="text" id="question-name" name="name" placeholder="Имя и фамилия" required>
             <label class="visually-hidden" for="question-email">Введите Email</label>
-            <input class="question__input input" type="email" id="question-email" name="email" placeholder="email@example.com">
+            <input class="question__input input" type="email" id="question-email" name="email" placeholder="email@example.com" required>
             <label class="visually-hidden" for="question-message">Введите Сообщение</label>
-            <textarea class="question__textarea input" name="message" id="question-message" placeholder="В свободной форме"></textarea>
+            <textarea class="question__textarea input" name="message" id="question-message" placeholder="В свободной форме" required></textarea>
             <div class="question__button-wrapper">
               <button class="button button--red question__button" type="submit">Отправить</button>
             </div>
