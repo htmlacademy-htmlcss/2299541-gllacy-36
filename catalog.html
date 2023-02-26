@@ -15,11 +15,11 @@
         </a>
         <ul class="navigation__list list">
           <li class="navigation__item navigation__item--list">
-            <span class="navigation__link navigation__link--with-dropdown">Каталог
+            <button class="navigation__link navigation__link--with-dropdown" type="button">Каталог
               <svg class="navigation__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.80799 6.19526C3.54764 5.93491 3.12553 5.93491 2.86518 6.19526C2.60483 6.45561 2.60483 6.87772 2.86518 7.13807L7.52553 11.7984C7.52759 11.8005 7.52967 11.8026 7.53177 11.8047C7.66246 11.9354 7.83392 12.0005 8.00521 12C8.17518 11.9995 8.34498 11.9344 8.47466 11.8047C8.47675 11.8027 8.47881 11.8006 8.48087 11.7985L13.1412 7.13807C13.4016 6.87772 13.4016 6.45561 13.1412 6.19526C12.8809 5.93491 12.4588 5.93491 12.1984 6.19526L8.00321 10.3905L3.80799 6.19526Z" fill="#2D3440"/>
               </svg>
-            </span>
+            </button>
             <div class="popover popover--dropdown">
               <ul class="dropdown popover__content list">
                 <li class="dropdown__item">
@@ -137,7 +137,7 @@
             <div class="filter-form__row filter-form__row--first">
               <div class="filter-form__select">
                 <label class="filter-form__title text text--small" for="select-control">Сортировка:</label>
-                <select class="select-control" id="select-control" aria-label="Сортировка">
+                <select class="select-control" id="select-control" aria-label="Сортировка" name="sort">
                   <option value="popular" selected>по популярности</option>
                   <option value="cheap">по возрастанию цены</option>
                   <option value="expensive">по убыванию цены</option>
@@ -155,10 +155,10 @@
                 <div class="range">
                   <div class="range__scale">
                     <div class="range__bar" style="left: 30px; width: 66px">
-                      <button class="range__toggle range__toggle--min">
+                      <button class="range__toggle range__toggle--min" type="button">
                         <span class="visually-hidden">Изменить минимальную цену.</span>
                       </button>
-                      <button class="range__toggle range__toggle--max">
+                      <button class="range__toggle range__toggle--max" type="button">
                         <span class="visually-hidden">Изменить максимальную цену.</span>
                       </button>
                     </div>
@@ -184,7 +184,7 @@
                   </li>
                   <li class="filter-form__item">
                     <label class="control text text--small">
-                      <input class="control__input visually-hidden" type="radio" name="fatness" value="max30" disabled>
+                      <input class="control__input visually-hidden" type="radio" name="fatness" value="max30">
                       <span class="control__mark-radio"></span>
                       <span  class="control__label">до 30%</span>
                     </label>
@@ -205,7 +205,7 @@
                 <ul class="filter-form__list list filter-form__list--add">
                   <li class="filter-form__item">
                     <label class="control text text--small">
-                      <input class="control__input visually-hidden" type="checkbox" name="chocolate" checked disabled>
+                      <input class="control__input visually-hidden" type="checkbox" name="chocolate">
                       <span class="control__mark">
                         <svg class="control__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M1.61513 1.61538C1.79569 1.43483 2.04057 1.33339 2.2959 1.33339H13.7029C13.9446 1.33339 14.0431 1.36192 14.0976 1.386C14.1553 1.4115 14.2281 1.45987 14.3836 1.61538C14.5908 1.82258 14.6656 2.04763 14.6656 2.29615V13.6647C14.6649 13.6771 14.6646 13.6896 14.6646 13.7021C14.6646 13.9574 14.5632 14.2023 14.3826 14.3829C14.2021 14.5634 13.9572 14.6648 13.7018 14.6648H2.2959C2.04057 14.6648 1.79569 14.5634 1.61513 14.3829C1.43458 14.2023 1.33315 13.9574 1.33315 13.7021V2.29615C1.33315 2.04081 1.43458 1.79593 1.61513 1.61538ZM15.8381 14.5437C15.7237 14.834 15.5503 15.1008 15.3254 15.3257C14.8948 15.7563 14.3108 15.9982 13.7018 15.9982H2.2959C1.68694 15.9982 1.10293 15.7563 0.672325 15.3257C0.241725 14.8951 -0.000183105 14.311 -0.000183105 13.7021V2.29615C-0.000183105 1.68719 0.241725 1.10317 0.672325 0.672569C0.898314 0.44658 1.16656 0.272564 1.45849 0.158214C1.57473 0.0595667 1.72523 6.10352e-05 1.88963 6.10352e-05H2.2959H13.7029C14.0403 6.10352e-05 14.3458 0.0379688 14.6365 0.166421C14.924 0.293453 15.1376 0.483702 15.3265 0.672572C15.808 1.15413 15.999 1.72995 15.999 2.29615V14.1094C15.999 14.2753 15.9384 14.4271 15.8381 14.5437Z" fill="#2D3440"/>
@@ -233,7 +233,7 @@
                   </li>
                   <li class="filter-form__item">
                     <label class="control text text--small">
-                      <input class="control__input visually-hidden" type="checkbox" name="fruits" disabled>
+                      <input class="control__input visually-hidden" type="checkbox" name="fruits">
                       <span class="control__mark">
                         <svg class="control__icon icon" aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M1.61513 1.61538C1.79569 1.43483 2.04057 1.33339 2.2959 1.33339H13.7029C13.9446 1.33339 14.0431 1.36192 14.0976 1.386C14.1553 1.4115 14.2281 1.45987 14.3836 1.61538C14.5908 1.82258 14.6656 2.04763 14.6656 2.29615V13.6647C14.6649 13.6771 14.6646 13.6896 14.6646 13.7021C14.6646 13.9574 14.5632 14.2023 14.3826 14.3829C14.2021 14.5634 13.9572 14.6648 13.7018 14.6648H2.2959C2.04057 14.6648 1.79569 14.5634 1.61513 14.3829C1.43458 14.2023 1.33315 13.9574 1.33315 13.7021V2.29615C1.33315 2.04081 1.43458 1.79593 1.61513 1.61538ZM15.8381 14.5437C15.7237 14.834 15.5503 15.1008 15.3254 15.3257C14.8948 15.7563 14.3108 15.9982 13.7018 15.9982H2.2959C1.68694 15.9982 1.10293 15.7563 0.672325 15.3257C0.241725 14.8951 -0.000183105 14.311 -0.000183105 13.7021V2.29615C-0.000183105 1.68719 0.241725 1.10317 0.672325 0.672569C0.898314 0.44658 1.16656 0.272564 1.45849 0.158214C1.57473 0.0595667 1.72523 6.10352e-05 1.88963 6.10352e-05H2.2959H13.7029C14.0403 6.10352e-05 14.3458 0.0379688 14.6365 0.166421C14.924 0.293453 15.1376 0.483702 15.3265 0.672572C15.808 1.15413 15.999 1.72995 15.999 2.29615V14.1094C15.999 14.2753 15.9384 14.4271 15.8381 14.5437Z" fill="#2D3440"/>
@@ -585,7 +585,7 @@
         <a class="page-footer__logo" href="https://htmlacademy.ru/" target="_blank">
           <img src="images/icons/logo-htmlacademy.svg" alt="Логотип html academy." width="93" height="27">
         </a>
-        <div class="page-footer__descr">Сделано в <a class="link page-footer__link" href="#">.html academy</a> © 2022</div>
+        <div class="page-footer__descr">Сделано в <a class="link page-footer__link" href="https://htmlacademy.ru/">.html academy</a> © 2022</div>
       </div>
     </footer>
 </html>
